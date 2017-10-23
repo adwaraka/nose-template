@@ -27,5 +27,17 @@ class MyTest(unittest.TestCase):
     def test_d_test(self):
         assert True
 
+    @with_setup(my_setup_function, my_teardown_function)
+    def test_e_test(self):
+        assert True
+
+    @with_setup(my_setup_function, my_teardown_function)
+    def test_f_test(self):
+        assert True
+
+    @with_setup(my_setup_function, my_teardown_function)
+    def test_g_test(self):
+        assert True
+
 if __name__ == '__main__':
     nose.main(addplugins=[HtmlOutput()])
